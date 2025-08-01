@@ -2,3 +2,52 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  /*background*/
+  --bg-image: url("../images/cover-image-dark.png");
+  --bg-color: rgb(0, 0, 40);
+
+  /*typography*/
+  --main-font: "IBM Plex mono", "Courier New", monospace;
+  --main-font-size: 18px;
+  --main-line-height: 130%;
+
+  /*title*/
+  --h1-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --h1-font-weight: 700;
+  --h1-line-height: 82.5%;
+  --h4-font-weight: 400;
+
+  /*header-description*/
+  --header-description-font-weight: 700;
+
+  /*sizes*/
+  --main-padding-inline: 10px;
+  --main-gap: 50px;
+  --section-article-vertical-padding: 40px;
+  --section-footer-vertical-margin: 20px;
+  --section-article-gap: 20px;
+  --wrapper-article-gap: 20px;
+  --section-article-list-gap: 20px;
+  --article-list-direction: column;
+  --article-list-gap: 10px;
+  --section-gallery-gap: 10px;
+  --gallery-gap: 10px;
+
+  /*color*/
+  --main-color: rgb(0, 0, 40);
+  --accent-color: rgb(255, 0, 112);
+  --main-title-color: rgb(219, 0, 255);
+  --title-text-shadow: 4px 4px 0px var(--accent-color);
+  --link-text-shadow: 2px 2px 0px var(--accent-color);
+  --footer-text-shadow: 2px 2px 0px var(--accent-color);
+  --btn-color: rgb(255, 0, 112);
+  --section-article-title-color: rgb(255, 0, 112);
+  --section-article-text-color: rgb(241, 178, 206);
+
+  /*properties*/
+  --btn-hover-color: rgba(255, 0, 112, 0.4);
+
+  --visible: inline-block;
+}

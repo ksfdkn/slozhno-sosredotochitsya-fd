@@ -9,4 +9,29 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --bg-image: url("../images/cover-image-light.png");
+  --bg-color: rgb(255, 241, 247);
+  --main-color: rgb(53, 52, 48);
+  --accent-color: rgb(255, 141, 203);
+  --main-title-color: rgb(255, 194, 230);
+  --btn-color: rgb(53, 52, 48);
+  --section-article-title-color: rgb(53, 52, 48);
+  --section-article-text-color: rgb(53, 52, 48);
+  --btn-hover-color: rgba(50, 49, 45, 0.4);
+  --visible: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-image: url("../images/cover-image-light.png");
+    --bg-color: rgb(255, 241, 247);
+    --main-color: rgb(53, 52, 48);
+    --accent-color: rgb(255, 141, 203);
+    --main-title-color: rgb(255, 194, 230);
+    --btn-color: rgb(53, 52, 48);
+    --section-article-title-color: rgb(53, 52, 48);
+    --section-article-text-color: rgb(53, 52, 48);
+    --btn-hover-color: rgba(50, 49, 45, 0.4);
+    --visible: none;
+  }
 }
