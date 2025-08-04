@@ -1,12 +1,8 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   font-family: var(--main-font, monospace);
   font-size: var(--main-font-size, 18px);
   line-height: var(--main-line-height, 130%);
   background-color: var(--bg-color, rgb(0, 0, 40));
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять
-   селекторы для разных цветовых тем. */
   background-image: var(--bg-image, url("../images/cover-image-dark.png"));
   background-repeat: no-repeat;
   background-position: center;
@@ -21,12 +17,12 @@
   justify-items: end;
   align-items: center;
   padding-inline: var(--main-padding-inline, 10px);
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .decorated-zone {
   position: relative;
-  block-size: 100vh;
-  min-block-size: 668px;
 }
 
 .decorated-zone::before {
@@ -74,6 +70,18 @@
   cursor: pointer;
 }
 
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--btn-hover-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--btn-color);
+}
+
 .header__theme-menu-button_active {
   border: 1px solid var(--btn-color, rgb(255, 0, 112));
   pointer-events: none;
@@ -97,7 +105,7 @@
 }
 
 .title-decor {
-  color: var(--main-color, rgb(0, 0, 40));
+  color: var(--title-decor-color, rgb(0, 0, 40));
   background-color: var(--accent-color, rgb(255, 0, 112));
 }
 
@@ -169,19 +177,31 @@
   line-height: inherit;
 }
 
-.article__text > .text__link {
+.text__link {
   text-decoration: none;
   text-shadow: var(--link-text-shadow);
 }
 
-.how-concentration .list-item__article > .article__title {
+.text__link:focus {
+  outline: none;
+}
+
+.text__link:hover {
+  border-bottom: 1px solid var(--section-article-text-color);
+}
+
+.text__link:focus-visible {
+  outline: 1px solid var(--section-article-text-color);
+}
+
+.article__title-weight {
   font-weight: var(--h4-font-weight, 400);
 }
 
-.section-article__gallery {
+.section-gallery {
   display: grid;
-  grid-template-rows: min-content auto;
-  gap: var(--section-gallery-gap, 10px);
+  grid-template-rows: min-content max-content;
+  gap: 10px;
 }
 
 .gallery {
@@ -198,16 +218,14 @@
   object-position: center;
 }
 
-.footer .decorated-zone {
-  min-block-size: 667px;
-}
-
 .footer {
   position: relative;
   display: grid;
   place-items: center;
   margin-block-start: var(--section-footer-vertical-margin, 20px);
   padding-inline: var(--main-padding-inline, 10px);
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .footer__title {
@@ -215,44 +233,7 @@
   text-shadow: var(--title-text-shadow);
 }
 
-.header__theme-menu-button:hover {
-  outline: 1px solid var(--btn-hover-color);
-}
-
-.header__theme-menu-button:focus,
-.text__link:focus {
-  outline: none;
-}
-
-.header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--btn-color);
-}
-
-.text__link:hover {
-  border-bottom: 1px solid var(--section-article-text-color);
-}
-
-.text__link:focus-visible {
-  outline: 1px solid var(--section-article-text-color);
-}
-
 @media (width >= 768px) {
-  :root {
-    --h1-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    --main-padding-inline: 20px;
-    --section-article-vertical-padding: 60px;
-    --main-gap: 80px;
-    --gallery-gap: 20px;
-    --section-gallery-gap: 20px;
-    --section-footer-vertical-margin: 40px;
-  }
-
-  .header__theme-menu-button {
-    padding-block: 1px;
-  }
-
-  /*я тут не разобралась нормально, с какой версии менять
-  размер шрифта. в этом же медиа-запросе?*/
   .header__title {
     margin-inline-start: calc(-1 * var(--main-padding-inline, 20px));
   }
@@ -284,6 +265,10 @@
   .what-concentration .section-article__list {
     grid-column: 1 / span 4;
     grid-row: 2;
+  }
+
+  .section-gallery {
+    gap: 20px;
   }
 
   .gallery .gallery__picture:nth-child(1) {

@@ -18,8 +18,6 @@
   </head>
   <body class="page">
     <header class="header decorated-zone">
-      <!--немного поигралась с aria. если будут какие-то комменатарии
-      по улучшению, то с радостью приму!)-->
       <nav class="header__theme-menu" aria-label="Переключение тем">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -167,7 +165,7 @@
           <ul class="section-article__list">
             <li class="section-article__list-item">
               <article class="list-item__article">
-                <h4 class="article__title title-decor">
+                <h4 class="article__title title-decor article__title-weight">
                   Представьте небо и облака
                 </h4>
                 <p class="article__text">
@@ -185,7 +183,9 @@
             </li>
             <li class="section-article__list-item">
               <article class="list-item__article">
-                <h4 class="article__title title-decor">Включите музыку</h4>
+                <h4 class="article__title title-decor article__title-weight">
+                  Включите музыку
+                </h4>
                 <p class="article__text">
                   Но не любую, и не любимую. Любимая может быть связана с
                   сильными положительными эмоциями, которые тоже очень сильно
@@ -197,7 +197,9 @@
             </li>
             <li class="section-article__list-item">
               <article class="list-item__article">
-                <h4 class="article__title title-decor">Прогуляйтесь</h4>
+                <h4 class="article__title title-decor article__title-weight">
+                  Прогуляйтесь
+                </h4>
                 <p class="article__text">
                   Или даже пробегитесь. Лучше найти парк или лес: один
                   эксперимент
@@ -217,7 +219,9 @@
             </li>
             <li class="section-article__list-item">
               <article class="list-item__article">
-                <h4 class="article__title title-decor">Хорошо ешьте</h4>
+                <h4 class="article__title title-decor article__title-weight">
+                  Хорошо ешьте
+                </h4>
                 <p class="article__text">
                   Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
                   которые препятствуют резким скачкам сахара в крови. Например,
@@ -229,7 +233,9 @@
             </li>
             <li class="section-article__list-item">
               <article class="list-item__article">
-                <h4 class="article__title title-decor">Читайте</h4>
+                <h4 class="article__title title-decor article__title-weight">
+                  Читайте
+                </h4>
                 <p class="article__text">
                   Настоящие бумажные книги. Это правда помогает с концентрацией:
                   чтобы прочитать пост в соцсети, достаточно нескольких минут
@@ -241,11 +247,13 @@
           </ul>
         </div>
       </section>
-      <section class="section-article" aria-labelledby="gallery-title">
-        <article class="section-article__gallery" id="gallery-title">
-          <h2 class="article__title title-decor">А можно в картинках?</h2>
-          <div class="gallery">
-            <picture class="gallery__picture">
+      <section class="section-gallery" aria-labelledby="gallery-title">
+        <h2 class="article__title title-decor" id="gallery-title">
+          А можно в картинках?
+        </h2>
+        <ul class="gallery">
+          <li class="gallery__picture">
+            <picture>
               <source srcset="./images/sunset.avif" type="image/avif" />
               <source srcset="./images/sunset.webp" type="image/webp" />
               <img
@@ -256,7 +264,9 @@
               и летящими птицами."
               />
             </picture>
-            <picture class="gallery__picture">
+          </li>
+          <li class="gallery__picture">
+            <picture>
               <source srcset="./images/ice-cream.avif" type="image/avif" />
               <source srcset="./images/ice-cream.webp" type="image/webp" />
               <img
@@ -267,7 +277,9 @@
               миской"
               />
             </picture>
-            <picture class="gallery__picture">
+          </li>
+          <li class="gallery__picture">
+            <picture>
               <source srcset="./images/tape.avif" type="image/avif" />
               <source srcset="./images/tape.webp" type="image/webp" />
               <img
@@ -278,7 +290,9 @@
                 окно с кнопкой ОК, цветок и другие декоративные элементы."
               />
             </picture>
-            <picture class="gallery__picture">
+          </li>
+          <li class="gallery__picture">
+            <picture>
               <source srcset="./images/books.avif" type="image/avif" />
               <source srcset="./images/books.webp" type="image/webp" />
               <img
@@ -288,7 +302,9 @@
                 alt="Стопка книг с чашкой кофе на вершине, среди которых энциклопедия, словарь, роман «Лолита» и другие"
               />
             </picture>
-            <picture class="gallery__picture">
+          </li>
+          <li class="gallery__picture">
+            <picture>
               <source srcset="./images/street.avif" type="image/avif" />
               <source srcset="./images/street.webp" type="image/webp" />
               <img
@@ -298,8 +314,8 @@
                 alt="Фиолетовая улица в аниме-стиле с домами, деревьями и проводами"
               />
             </picture>
-          </div>
-        </article>
+          </li>
+        </ul>
       </section>
     </main>
     <footer class="footer decorated-zone">

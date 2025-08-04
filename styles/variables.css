@@ -1,8 +1,6 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
-
+/*спасибо, учту на будущее насчет меньшего использования
+переменных в коде. могла бы сейчас поправить, но боюсь,
+что погрязну надолго в коде, а у меня переезд :( */
 :root {
   /*background*/
   --bg-image: url("../images/cover-image-dark.png");
@@ -26,7 +24,7 @@
   --main-padding-inline: 10px;
   --main-gap: 50px;
   --section-article-vertical-padding: 40px;
-  --section-footer-vertical-margin: 20px;
+  --section-footer-vertical-margin: 40px;
   --section-article-gap: 20px;
   --wrapper-article-gap: 20px;
   --section-article-list-gap: 20px;
@@ -36,7 +34,7 @@
   --gallery-gap: 10px;
 
   /*color*/
-  --main-color: rgb(0, 0, 40);
+  --title-decor-color: rgb(0, 0, 40);
   --accent-color: rgb(255, 0, 112);
   --main-title-color: rgb(219, 0, 255);
   --title-text-shadow: 4px 4px 0px var(--accent-color);
@@ -50,4 +48,16 @@
   --btn-hover-color: rgba(255, 0, 112, 0.4);
 
   --visible: inline-block;
+}
+
+@media (width >= 768px) {
+  :root {
+    --h1-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --main-padding-inline: 20px;
+    --section-article-vertical-padding: 60px;
+    --main-gap: 80px;
+    --gallery-gap: 20px;
+    --section-gallery-gap: 20px;
+    --section-footer-vertical-margin: 60px;
+  }
 }
